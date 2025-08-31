@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import {useEffect} from 'react';
+import MobileNavbar from './components/MobileNavbar'
+import SideNavbar from './components/SideNavbar/sideNavbar'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
+import Projects from './components/Projects'
 import './App.css';
 
-function App() {
+const App = () =>  {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+
+      {/* Show MobileNavbar on small devices like (mobile) */}
+      <div className="block md:hidden">
+        <MobileNavbar />
+      </div>
+      
+    
+      {/* Show SideNavbar on desktop */}
+      <div className="hidden md:block">
+        <SideNavbar />
+      </div>
+
+
+      <Home/>
+      <About/>
+      <Projects/>
+      <Contact/>
+      
+    </>
+
+  )
 }
+
+
 
 export default App;

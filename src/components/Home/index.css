@@ -1,0 +1,22 @@
+.home-bg-container{
+    background-size: cover;
+    opacity:10%;
+}
+
+/* Profile */
+.glow-effect {
+  animation: glowEffect 3s ease-in-out infinite;
+}
+
+/* Profile glow-effect (pulse) */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 16px #efeee77f, 0 0 22px #f5f4ef7f;
+  }
+  50% {
+    box-shadow: 0 0 12px #052554, 0 0 36px #052554;
+  }
+  100% {
+   box-shadow: 0 0 16px #efeee77f, 0 0 22px #f5f4ef7f;
+  }
+}

@@ -1,0 +1,30 @@
+/*   Active Tab Style  */
+.activated-tab{
+    height:35px;
+    width:100%;
+    background-color:#fbbf24;
+    padding-left:10px;
+    padding-right:10px;
+    border:0px solid;
+    border-radius:4px;
+    color:#000000;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 2s ease;
+}
+
+
+/*  Menu Style  */
+.menu {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none; /* hide clicks when closed */
+}
+
+/*  Menu-active Style  */
+.menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto; /* enable clicks when visible */
+}
