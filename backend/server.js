@@ -1,27 +1,31 @@
-import express from 'express'; // expressjs
+import express from 'express';
 import cors from 'cors';
-import nodemailer from 'nodemailer'; // nodemailer for sending mails
+import nodemailer from 'nodemailer';
 
 const app = express();
 app.use(express.json());
-app.use(cors());
 
-// Dynamic PORT from Render (fallback 5000 for local)
+// CORS setup
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*",
+}));
+
+// Dynamic port
 const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 
-// Gmail Transporter
+// Gmail transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
-  secure: true, // SSL
+  secure: true,
   auth: {
-    user: "rajubadanakanti7@gmail.com",
-    pass: "fateeargglfxpxyq", // Use App Password for Gmail
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
   },
 });
 
-// Verify Transporter
+// Verify transporter
 transporter.verify((error, success) => {
   if (error) {
     console.error("❌ Transporter Error:", error);
@@ -30,14 +34,14 @@ transporter.verify((error, success) => {
   }
 });
 
-// POST Route >>
+// Send mail route
 app.post("/send", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
     await transporter.sendMail({
-      from: `"Portfolio Contacts" <rajubadanakanti7@gmail.com>`,
-      to: "rajubadanakanti7@gmail.com",
+      from: `"Portfolio Contacts" <${process.env.GMAIL_USER}>`,
+      to: process.env.EMAIL,
       subject: subject || `Portfolio Contact from ${name}`,
       text: message,
       replyTo: email,
@@ -52,16 +56,16 @@ app.post("/send", async (req, res) => {
     res.json({ success: true });
   } catch (error) {
     console.error("❌ Mail Send Error:", error);
-    res.json({ success: false });
+    res.status(500).json({ success: false });
   }
 });
 
-// Root test route >>
+// Root route
 app.get("/", (req, res) => {
   res.send("✅ Backend is running!");
 });
 
-// Start Server >>
+// Start server
 app.listen(PORT, HOST, () => {
   console.log(`Server running on http://${HOST}:${PORT} >>>`);
 });

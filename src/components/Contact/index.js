@@ -58,7 +58,7 @@ const [isFormLoading, setFormLoading] = useState(false) // loading effect
         event.preventDefault()
         setFormLoading(true) // Loading...
        if (filledDetailsValidation() === true){        
-        const url = "https://personal-portfolio-hbuy.onrender.com"; // Backend Url
+        const url = "https://personal-portfolio-0n8d.onrender.com"; // Backend Url
         const options = {
             method:"POST",
             headers:{
