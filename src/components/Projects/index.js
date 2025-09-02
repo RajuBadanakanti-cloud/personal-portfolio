@@ -31,10 +31,10 @@ const userProjectsData = [{
 
 {
     id:4,
-    projectTitle:"Todo",
-    description:"A simple and responsive task management application built with React Allows users to add, edit, and delete tasks with data stored in localStorage for persistence",
-    coverImage:"https://res.cloudinary.com/dnh9hnjbx/image/upload/v1754898375/Projects%20Resources/Screenshot_2025-08-11_130949_uy6cxb.png",
-    projectDeploymentURL:"https://chatgpt.com/",
+    projectTitle:"NXT Trendz (eCommerce)",
+    description:"A Web responsive eCommerce application with authentication login/logout built with React Allows users to add to card, Prime deatls, filtering by categories, rating, reviews",
+    coverImage:"https://res.cloudinary.com/dnh9hnjbx/image/upload/v1756799010/Projects%20Resources/NXT-Trendz-eCommerce-Cover-Image.png",
+    projectDeploymentURL:"https://rjnxttrendzapp.ccbp.tech",
     gitRepoURL:'https://github.com/RajuBadanakanti-cloud/My-Todo-App.git'
 },] 
 
@@ -56,10 +56,10 @@ const Projects = () => (
                     {/* Card Layer */}
                     <div className='project-card-layer-container'>
                         {/* Project Title */}
-                        <h3 className='text-rose-100 font-bebas font-bold tracking-wide'>{eachProject.projectTitle}</h3>
+                        <h3 className='text-slate-100 font-bebas font-bold tracking-wide'>{eachProject.projectTitle}</h3>
                         {/* Project Description*/}
-                        <p className='text-rose-200 w-11/12 text-sm md:text-base'>
-                            {eachProject.description}
+                        <p className='text-slate-200 w-11/12 text-sm md:text-base'>
+                        {eachProject.description}
                         </p>
 
                         {/* Project Navigation container */}
@@ -71,7 +71,7 @@ const Projects = () => (
                         <FaGithub /></a>
 
                          {/* Project live View => */}                        
-                        <a href={eachProject.gitRepoURL} target="__blank" className="bg-white text-center text-amber-500 text-sm md:text-base rounded-full 
+                        <a href={eachProject.projectDeploymentURL} target="__blank" className="bg-white text-center text-amber-500 text-sm md:text-base rounded-full 
                         p-3 hover:text-slate-800 mr-6">
                         <FaExternalLinkAlt /></a>
 
