@@ -1,11 +1,14 @@
-import express from 'express' // expressjs
-import cors from 'cors' 
-import nodemailer from 'nodemailer'  // nodemailer is a library package this is used send a mails from server 
+import express from 'express'; // expressjs
+import cors from 'cors';
+import nodemailer from 'nodemailer'; // nodemailer for sending mails
 
-const app = express()
-app.use(express.json())
-app.use(cors())
+const app = express();
+app.use(express.json());
+app.use(cors());
 
+// Dynamic PORT from Render (fallback 5000 for local)
+const PORT = process.env.PORT || 5000;
+const HOST = '0.0.0.0';
 
 // Gmail Transporter
 const transporter = nodemailer.createTransport({
@@ -14,11 +17,11 @@ const transporter = nodemailer.createTransport({
   secure: true, // SSL
   auth: {
     user: "rajubadanakanti7@gmail.com",
-    pass: "fateeargglfxpxyq", 
-  }
+    pass: "fateeargglfxpxyq", // Use App Password for Gmail
+  },
 });
 
-//  Verify Transporter >>
+// Verify Transporter
 transporter.verify((error, success) => {
   if (error) {
     console.error("❌ Transporter Error:", error);
@@ -27,17 +30,17 @@ transporter.verify((error, success) => {
   }
 });
 
-//  POST Route >>
+// POST Route >>
 app.post("/send", async (req, res) => {
-  const { name, email, subject, message } = req.body; // user inputs
+  const { name, email, subject, message } = req.body;
 
   try {
     await transporter.sendMail({
-      from:`"Portfolio Contacts" <rajubadanakanti7@gmail.com>`,
+      from: `"Portfolio Contacts" <rajubadanakanti7@gmail.com>`,
       to: "rajubadanakanti7@gmail.com",
       subject: subject || `Portfolio Contact from ${name}`,
       text: message,
-      replyTo:email,
+      replyTo: email,
       html: `
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
@@ -53,8 +56,12 @@ app.post("/send", async (req, res) => {
   }
 });
 
-//  Start Server >> 
-app.listen(5000, () =>{
-  console.log("Server running on http://localhost:5000 >>>");
-  
+// Root test route >>
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running!");
+});
+
+// Start Server >>
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on http://${HOST}:${PORT} >>>`);
 });
