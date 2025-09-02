@@ -58,7 +58,7 @@ const [isFormLoading, setFormLoading] = useState(false) // loading effect
         event.preventDefault()
         setFormLoading(true) // Loading...
        if (filledDetailsValidation() === true){        
-        const url = "http://localhost:5000/send";
+        const url = "https://personal-portfolio-hbuy.onrender.com";
         const options = {
             method:"POST",
             headers:{
