@@ -78,12 +78,12 @@ const renderMenuBarItems = () => {
         <div className="w-6/12 ml-6 flex flex-row justify-start items-start">
 
         {/* Git Hub */}
-            <a  href='https://www.linkedin.com/in/raju-badanakanti-491705259/'
+            <a href='https://github.com/RajuBadanakanti-cloud'
             target="__blank"
             className="text-slate-100 text-lg hover:text-amber-400 mr-8"><FaGithub/></a>
 
         {/* Linkedin */}
-            <a href='https://github.com/RajuBadanakanti-cloud'
+            <a  href='https://www.linkedin.com/in/raju-badanakanti-491705259/'
             target="__blank"
             className="text-slate-100 text-lg hover:text-amber-400 mr-8"><FaLinkedin/></a>
         </div>
