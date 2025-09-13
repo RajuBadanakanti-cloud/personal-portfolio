@@ -1,0 +1,9 @@
+/*  Background main div container */
+.contact-bg-container{
+        background-image:linear-gradient(to top, #02060f, #060c18);
+}
+
+/* Form Submit Button Glow Effect */
+.button-glow-effect:hover{
+        box-shadow: 0 0 6px #fbbe247a , 0 0 16px #fbbe247a , 0 0 18px #fbbe247a;
+}

@@ -1,0 +1,68 @@
+
+/* Backgroound main div container */
+.project-bg-container{
+background-image:linear-gradient(to top,#050111,#071220);
+}
+
+
+/*  Project Card Section */
+.project-card-container{
+    min-height:200px;
+    width:250px;
+    border-radius:6px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-shadow: 0 0 6px rgb(255, 191, 0),0 0 16px rgb(255, 191, 0);
+    position:relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+.project-card-container img{
+    transition: transform 0.5s; 
+}
+
+/* project card desktop view */
+@media  screen and (min-width:768px) {
+.project-card-container{
+    min-height:250px;
+    width:300px;
+    border-radius:10px;
+    transition: box-shadow 0.5s;
+}
+}
+
+.project-card-layer-container{
+    height:0;
+    width:100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.888), rgb(255, 179, 1));
+    border-radius:6px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    overflow: hidden;
+    left: 0;
+    bottom:0;
+    transition: height 0.3s;
+}
+
+/* project card layer desktop view */
+@media  screen and (min-width:768px) {
+.project-card-layer-container{
+        border-radius:8px;
+        transition: height 0.5s;
+}
+}
+
+/* Project Card hover */
+.project-card-container:hover img{
+    transform: scale(1.1);
+}
+
+/* Project Card hover */
+.project-card-container:hover .project-card-layer-container{
+        height: 100%;
+}
