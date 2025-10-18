@@ -2,7 +2,7 @@ import { FaUser, FaHome, FaFolderOpen, FaEnvelope,FaLinkedin, FaGithub, FaDownlo
 
 import './index.css'
 import { useState } from "react";
-const profileImgLink = "https://res.cloudinary.com/dnh9hnjbx/image/upload/v1754465641/My%20Personals/Profile-3-3_IMG_wjjbuz.jpg"
+const profileImgLink = "https://res.cloudinary.com/dnh9hnjbx/image/upload/v1757773090/My%20Personals/4KProfile-3-3_IMG_PhotoGrid_fn4dgc.png"
 
 // Navigation Tabs Data
 const navigationTabsList = [
