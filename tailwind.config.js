@@ -5,21 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        // Headings 
-        bebas: ['Bebas Neue', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        playfair: ['Playfair Display', 'serif'],
-        oswald: ['Oswald', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        opensans: ['Open Sans', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
-        //  Handwriting
-        dancing: ['Dancing Script', 'cursive'],
-        pacifico: ['Pacifico', 'cursive'],
-        greatvibes: ['Great Vibes', 'cursive']
-      },
+
+fontFamily: {
+  bebas: ['Bebas Neue', 'sans-serif'],
+  poppins: ['Poppins', 'sans-serif'],
+}
+
     },
   },
   plugins: [],
