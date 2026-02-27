@@ -51,12 +51,15 @@ const About = () => (
                 {/* Fresher */}
                <li className='list-disc text-slate-500 mb-4 ml-4'>
                 <h1 className='text-slate-500 font-montserrat text-sm md:text-base m-0'>Fresher</h1>
+            
+
                 </li>
 
                 {/* Internship Experience */}
                 <li className='list-disc text-slate-500 mb-4 ml-4'>
                     <h1 className='text-slate-500 font-montserrat text-sm md:text-base m-0'>Internship Experience</h1>
-                    <p className="text-slate-200 m-0 text-sm md:text-base">Unified Mentor <span className="text-lime-200">(Ongoing)</span> <br/>Web Development Internship (3-months)</p>
+                    <p className="text-slate-200 m-0 text-sm md:text-base">Unified Mentor<br/>Frontend Development Internship</p>
+                    <p className="text-slate-200 text-xs md:text-sm">Certified - 3 months of experience</p>
                 </li>
             </ul>
         </section>
@@ -108,7 +111,7 @@ const About = () => (
                 <li className='list-disc  text-slate-500 mb-4 ml-4'>
                     <h1 className='text-slate-500 flex items-center font-montserrat text-sm md:text-base m-0'>
                         Database <FaDatabase className="ml-2 h-[14px] w-[14px]"/></h1>
-                    <p className="text-slate-200 text-sm md:text-base">SQLlite</p>
+                    <p className="text-slate-200 text-sm md:text-base">MongoDb, SQLlite</p>
                 </li>
             </ul>
         </section>
@@ -130,7 +133,7 @@ const About = () => (
                 <li className='list-disc text-slate-500 mb-4 ml-4'>
                     <h1 className='text-slate-500 flex items-center font-montserrat text-sm md:text-base m-0'>
                       Web Development</h1>
-                    <p className="text-slate-200 text-sm md:text-base">Vscode</p>
+                    <p className="text-slate-200 text-sm md:text-base">Vscode, Postman</p>
                 </li>
 
                 {/* Designs  */}

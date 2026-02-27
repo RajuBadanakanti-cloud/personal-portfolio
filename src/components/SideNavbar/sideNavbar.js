@@ -79,7 +79,7 @@ const SideNavbar  = () => {
                   <FaLinkedin/></a>
 
                 {/* Github >>  */}
-                <a href='https://github.com/RajuBadanakanti-cloud' 
+                <a href='https://github.com/RajuBadanakanti' 
                   target="__blank" className='mr-3 text-slate-700 text-xl hover:text-amber-500'>
                   <FaGithub/></a>
 

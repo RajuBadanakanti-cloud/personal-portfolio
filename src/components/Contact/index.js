@@ -97,10 +97,10 @@ const [isFormLoading, setFormLoading] = useState(false) // loading effect
 // RENDERING FORM VIEW *******
 const renderFormView = () => (
     // FORM SECTION >>
-        <form className='w-11/12 md:w-1/2 flex flex-col justify-start items-start p-2 mb-10 md:mb-5 mr-1 md:mr-10 ' onSubmit={onSubmitForm}>
+        <form id="contact-form" className='w-11/12 md:w-1/2 flex flex-col justify-start items-start p-2 mb-10 md:mb-5 mr-1 md:mr-10 ' onSubmit={onSubmitForm}>
             <h1 className='text-amber-400 text-2xl md:text-3xl font-bebas tracking-wide mb-3'>Get in Touch</h1>
                 {/* Name */}
-                <input type="text"
+                <input type="text" id="name"
                 className='h-12 md:h-14 w-full text-sm md:text-base  bg-transparent border-1 border-slate-300 rounded-lg outline-none  focus:border-amber-400 text-slate-200 px-3 mb-4'
                 placeholder='Name'
                 value={name}
@@ -108,21 +108,21 @@ const renderFormView = () => (
              />
 
                 {/* Email */}
-                <input type="email"
+                <input type="email" id="email"
                 className='h-12 md:h-14 w-full text-sm md:text-base bg-transparent border-1 border-slate-300 rounded-lg outline-none focus:border-amber-400 text-slate-200 px-3 mb-4'
                 placeholder='Email'
                 value={email}
                 onChange={handleEmailInput}/>
 
                 {/* Subject */}
-                <input type="text"
+                <input type="text" id="subject"
                 className='h-12 md:h-14 w-full text-sm md:text-base bg-transparent border-1 border-slate-300 rounded-lg outline-none  focus:border-amber-400 text-slate-200 px-3 mb-4'
                 placeholder='Subject'
                 value={subject}
                 onChange={handleSubjectInput}/>
 
                 {/* Message */}
-                 <textarea placeholder="Write your message..."
+                 <textarea id="message" placeholder="Write your message..."
                  className="h-28 md:h-32 w-full text-sm md:text-base bg-transparent border-1 border-slate-300 rounded-lg focus:border-amber-400 outline-none text-slate-200 p-3 mb-4"
                  value={message}
                  onChange={handleMessageInput} />
